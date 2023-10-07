@@ -8,6 +8,7 @@ Multimedia system for cars
 - Enables voice control.
 
 # Used technologys
--Qt Designer
--PyCharm
--VS Code
+- Qt Designer
+- PyCharm
+- VS Code
+  
