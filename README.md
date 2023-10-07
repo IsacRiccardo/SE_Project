@@ -6,3 +6,8 @@ Multimedia system for cars
 - Enable navigation;
 - Play audio, video media;
 - Enables voice control.
+
+# Used technologys
+-Qt Designer
+-PyCharm
+-VS Code
