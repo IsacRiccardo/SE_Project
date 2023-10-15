@@ -12,4 +12,7 @@ Multimedia system for cars
 - PyCharm
 - VS Code
 - UML generation tool
+
+# Generating UML
+Execute the bash script located in the root directory. Output will be in the UML directory, in PNG format
   
