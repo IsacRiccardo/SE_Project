@@ -7,8 +7,9 @@ Multimedia system for cars
 - Play audio, video media;
 - Enables voice control.
 
-# Used technologys
+# Used technologies
 - Qt Designer
 - PyCharm
 - VS Code
+- UML generation tool
   
