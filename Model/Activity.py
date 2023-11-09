@@ -1,12 +1,10 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
-from PySide6.QtWidgets import QStackedWidget
 
-
-class Activity(QStackedWidget):
+class Activity:
     def __init__(self):
-        super().__init__()
+        pass
 
-    def OnClick(self, ):
+    def Display(self, ):
         pass
 
