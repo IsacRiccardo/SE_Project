@@ -1,17 +1,9 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
-from PySide6.QtWidgets import QMainWindow
-
-from Model.CarBoard import Ui_MainWindow
+from UI.CarBoard import Ui_MainWindow
 
 
-class ActivityFactory(QMainWindow, Ui_MainWindow):
-    def __init__(self):
-        super().__init__()
+class ActivityFactory(Ui_MainWindow):
 
-    def Create(self, ):
-        pass
-
-    def OnClick(self, Activity):
-        pass
-
+    def Create(self, activity):
+        self.setupUi(activity)

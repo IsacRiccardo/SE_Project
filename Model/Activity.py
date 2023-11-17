@@ -1,10 +1,15 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
+from PySide6.QtWidgets import QMainWindow
 
-class Activity:
+from Model.ActivityFactory import ActivityFactory
+
+
+class Activity(QMainWindow, ActivityFactory):
     def __init__(self):
-        pass
+        super().__init__()
+        self.Create(self)
 
     def Display(self, ):
-        pass
+        self.show()
 

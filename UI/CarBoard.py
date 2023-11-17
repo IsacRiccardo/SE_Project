@@ -16,7 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QMainWindow,
-    QPushButton, QSizePolicy, QVBoxLayout, QWidget)
+    QPushButton, QSizePolicy, QStackedWidget, QVBoxLayout,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -83,6 +84,21 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addLayout(self.btnLeftLayout)
 
+        self.stackedWidget = QStackedWidget(self.centralwidget)
+        self.stackedWidget.setObjectName(u"stackedWidget")
+        self.page = QWidget()
+        self.page.setObjectName(u"page")
+        self.page.setEnabled(True)
+        self.stackedWidget.addWidget(self.page)
+        self.page_2 = QWidget()
+        self.page_2.setObjectName(u"page_2")
+        self.page_2.setEnabled(True)
+        self.page_2.setStyleSheet(u"\n"
+"background-color: rgb(0, 0, 0);")
+        self.stackedWidget.addWidget(self.page_2)
+
+        self.horizontalLayout.addWidget(self.stackedWidget)
+
         self.btnRightLayout = QVBoxLayout()
         self.btnRightLayout.setSpacing(7)
         self.btnRightLayout.setObjectName(u"btnRightLayout")
@@ -132,6 +148,9 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
+
+        self.stackedWidget.setCurrentIndex(1)
+
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
