@@ -11,15 +11,21 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
-  <property name="maximumSize">
+  <property name="minimumSize">
    <size>
     <width>1280</width>
     <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000000</width>
+    <height>1000000</height>
    </size>
   </property>
   <property name="font">
@@ -29,10 +35,16 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CarBoard</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -70,16 +82,35 @@
           <pointsize>12</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{
-	color: white;
-	background-color: black;
+	background-color: white;
 	border-radius:10px;
+	border: 2px solid black
+}
+
+QPushButton::pressed{
+	background-color: #a6e9ff;
+	border-radius: 10px;
+	border: 2px solid black
 }
 </string>
         </property>
         <property name="text">
-         <string>GPS</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/Icons/Icons/maps-pin-black-icon.svg</normaloff>:/Icons/Icons/maps-pin-black-icon.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -113,16 +144,35 @@
           <pointsize>12</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{
-	color: white;
-	background-color: black;
+	background-color: white;
 	border-radius:10px;
+	border: 2px solid black
+}
+
+QPushButton::pressed{
+	background-color: #a6e9ff;
+	border-radius: 10px;
+	border: 2px solid black
 }
 </string>
         </property>
         <property name="text">
-         <string>HOME</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/Icons/Icons/home-icon.svg</normaloff>:/Icons/Icons/home-icon.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -132,24 +182,24 @@
      </layout>
     </item>
     <item>
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>-1</number>
       </property>
-      <widget class="QWidget" name="page">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QWidget" name="page_2">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">
-background-color: rgb(0, 0, 0);</string>
-       </property>
-      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
      </widget>
     </item>
     <item>
@@ -183,16 +233,35 @@ background-color: rgb(0, 0, 0);</string>
           <pointsize>12</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{
-	color: white;
-	background-color: black;
+	background-color: white;
+	border-radius:10px;
+	border: 2px solid black
+}
+
+QPushButton::pressed{
+	background-color: #a6e9ff;
 	border-radius: 10px;
+	border: 2px solid black
 }
 </string>
         </property>
         <property name="text">
-         <string>Audio/Video</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/Icons/Icons/headphone-icon.svg</normaloff>:/Icons/Icons/headphone-icon.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -226,16 +295,35 @@ background-color: rgb(0, 0, 0);</string>
           <pointsize>12</pointsize>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{
-	color: white;
-	background-color: black;
+	background-color: white;
 	border-radius:10px;
+	border: 2px solid black
+}
+
+QPushButton::pressed{
+	background-color: #a6e9ff;
+	border-radius: 10px;
+	border: 2px solid black
 }
 </string>
         </property>
         <property name="text">
-         <string>Voice Control</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/Icons/Icons/microphone-icon.svg</normaloff>:/Icons/Icons/microphone-icon.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -247,6 +335,8 @@ background-color: rgb(0, 0, 0);</string>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

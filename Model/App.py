@@ -4,6 +4,7 @@ from PySide6 import QtCore
 from PySide6.QtWidgets import QApplication, QWidget, QDialog
 
 from Model.Activity import Activity
+from Model.GPS import GPS
 from Model.Home import Home
 
 
@@ -19,7 +20,11 @@ class App:
 
         # Create home widget and insert it at index 2 (first 2 indexes are occupied by default)
         self.home_page = Home()
-        self.activity.stackedWidget.insertWidget(2, self.home_page)
+        self.activity.stackedWidget.insertWidget(0, self.home_page)
+
+        # Create GPS widget and insert it into the stacked widget
+        self.gps_page = GPS()
+        self.activity.stackedWidget.insertWidget(1, self.gps_page)
 
         # Connect UI buttons to methods (Slots)
         self.activity.HomeButton.clicked.connect(self.showHome)
@@ -31,19 +36,25 @@ class App:
     def showHome(self):
         print("Home")
         # Display home page
-        self.activity.stackedWidget.setCurrentIndex(2)
+        self.activity.stackedWidget.setCurrentIndex(0)
 
     @QtCore.Slot()
     def showGPS(self):
         print("GPS")
+        # Display home page
+        self.activity.stackedWidget.setCurrentIndex(1)
 
     @QtCore.Slot()
     def showVC(self):
         print("VC")
+        # Display home page
+        self.activity.stackedWidget.setCurrentIndex(2)
 
     @QtCore.Slot()
     def showMedia(self):
         print("Media")
+        # Display home page
+        self.activity.stackedWidget.setCurrentIndex(3)
 
 
 def main():

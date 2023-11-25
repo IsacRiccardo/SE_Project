@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>Icons/headphone-icon.svg</file>
+    <file>Icons/home-icon.svg</file>
+    <file>Icons/maps-pin-black-icon.svg</file>
+    <file>Icons/microphone-icon.svg</file>
+  </qresource>
+</RCC>
