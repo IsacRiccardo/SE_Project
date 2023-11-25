@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="Icons">
+    <file>Icons/play-pause-icon.svg</file>
+    <file>Icons/step-backward-icon.svg</file>
+    <file>Icons/step-forward-icon.svg</file>
     <file>Icons/headphone-icon.svg</file>
     <file>Icons/home-icon.svg</file>
     <file>Icons/maps-pin-black-icon.svg</file>

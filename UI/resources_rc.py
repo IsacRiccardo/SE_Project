@@ -66,6 +66,42 @@ C9.14,86.01,2.95\
 ,46.12,23.76L46.\
 12,23.76z\x22/></g>\
 </svg>\
+\x00\x00\x02\x1d\
+<\
+svg id=\x22Layer_1\x22\
+ data-name=\x22Laye\
+r 1\x22 xmlns=\x22http\
+://www.w3.org/20\
+00/svg\x22 viewBox=\
+\x220 0 122.88 74.8\
+2\x22><defs><style>\
+.cls-1{fill-rule\
+:evenodd;}</styl\
+e></defs><title>\
+play-pause</titl\
+e><path class=\x22c\
+ls-1\x22 d=\x22M51.93,\
+43.9c5.49-3.55,5\
+.47-7.5,0-10.64L\
+9,1.86C4.55-.94-\
+.12.71,0,6.55L.1\
+8,68.23c.38,6.34\
+,4,8.07,9.33,5.1\
+4L51.93,43.9ZM10\
+5.84,0h13.1a4,4,\
+0,0,1,3.94,3.94V\
+70.88a4,4,0,0,1-\
+3.94,3.94h-13.1a\
+4,4,0,0,1-3.94-3\
+.94V3.94A4,4,0,0\
+,1,105.84,0ZM71.\
+94,0H85A4,4,0,0,\
+1,89,3.94V70.88A\
+4,4,0,0,1,85,74.\
+82H71.94A4,4,0,0\
+,1,68,70.88V3.94\
+A4,4,0,0,1,71.94\
+,0Z\x22/></svg>\
 \x00\x00\x029\
 <\
 ?xml version=\x221.\
@@ -258,6 +294,81 @@ c-0.3,0-0.58-0.0\
 11.85,108.77L111\
 .85,108.77z\x22/></\
 g></svg>\
+\x00\x00\x022\
+<\
+svg xmlns=\x22http:\
+//www.w3.org/200\
+0/svg\x22 shape-ren\
+dering=\x22geometri\
+cPrecision\x22 text\
+-rendering=\x22geom\
+etricPrecision\x22 \
+image-rendering=\
+\x22optimizeQuality\
+\x22 fill-rule=\x22eve\
+nodd\x22 clip-rule=\
+\x22evenodd\x22 viewBo\
+x=\x220 0 511 510.4\
+2\x22><path fill-ru\
+le=\x22nonzero\x22 d=\x22\
+M224.44 293.22c-\
+28.24-25.15-27.4\
+8-47.55 0-73.04L\
+450.23 9.54c23.8\
+-19.92 60.85-8.3\
+9 60.77 32.19v42\
+3.76c-2.66 43.51\
+-39.44 55.73-64.\
+14 35.31L224.44 \
+293.22zm-114.38 \
+216.7H28.18C12.6\
+7 509.92 0 497.1\
+6 0 481.71V28.94\
+C0 13.52 12.76.7\
+6 28.18.76h81.88\
+c15.46 0 28.21 1\
+2.67 28.21 28.18\
+v452.77c0 15.54-\
+12.69 28.21-28.2\
+1 28.21z\x22/></svg\
+>\
+\x00\x00\x020\
+<\
+svg xmlns=\x22http:\
+//www.w3.org/200\
+0/svg\x22 shape-ren\
+dering=\x22geometri\
+cPrecision\x22 text\
+-rendering=\x22geom\
+etricPrecision\x22 \
+image-rendering=\
+\x22optimizeQuality\
+\x22 fill-rule=\x22eve\
+nodd\x22 clip-rule=\
+\x22evenodd\x22 viewBo\
+x=\x220 0 511 510.4\
+3\x22><path fill-ru\
+le=\x22nonzero\x22 d=\x22\
+M286.56 293.22c2\
+8.24-25.15 27.48\
+-47.55 0-73.04L6\
+0.77 9.54C36.97-\
+10.38-.08 1.15 0\
+ 41.73v423.76c2.\
+66 43.51 39.44 5\
+5.73 64.14 35.32\
+l222.42-207.59zm\
+114.38 216.7h81.\
+88c15.51 0 28.18\
+-12.76 28.18-28.\
+21V28.94C511 13.\
+52 498.24.76 482\
+.82.76h-81.88c-1\
+5.45 0-28.21 12.\
+67-28.21 28.18v4\
+52.77c0 15.55 12\
+.69 28.21 28.21 \
+28.21z\x22/></svg>\
 "
 
 qt_resource_name = b"\
@@ -270,6 +381,11 @@ qt_resource_name = b"\
 \x00m\
 \x00a\x00p\x00s\x00-\x00p\x00i\x00n\x00-\x00b\x00l\x00a\x00c\x00k\x00-\x00i\x00c\
 \x00o\x00n\x00.\x00s\x00v\x00g\
+\x00\x13\
+\x07\x93O'\
+\x00p\
+\x00l\x00a\x00y\x00-\x00p\x00a\x00u\x00s\x00e\x00-\x00i\x00c\x00o\x00n\x00.\x00s\
+\x00v\x00g\
 \x00\x0d\
 \x08\xa6\x5c\x87\
 \x00h\
@@ -284,6 +400,16 @@ qt_resource_name = b"\
 \x00h\
 \x00e\x00a\x00d\x00p\x00h\x00o\x00n\x00e\x00-\x00i\x00c\x00o\x00n\x00.\x00s\x00v\
 \x00g\
+\x00\x16\
+\x01\xad\x03\xa7\
+\x00s\
+\x00t\x00e\x00p\x00-\x00b\x00a\x00c\x00k\x00w\x00a\x00r\x00d\x00-\x00i\x00c\x00o\
+\x00n\x00.\x00s\x00v\x00g\
+\x00\x15\
+\x05\xbd2'\
+\x00s\
+\x00t\x00e\x00p\x00-\x00f\x00o\x00r\x00w\x00a\x00r\x00d\x00-\x00i\x00c\x00o\x00n\
+\x00.\x00s\x00v\x00g\
 "
 
 qt_resource_struct = b"\
@@ -291,15 +417,21 @@ qt_resource_struct = b"\
 \x00\x00\x00\x00\x00\x00\x00\x00\
 \x00\x00\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x02\
 \x00\x00\x00\x00\x00\x00\x00\x00\
-\x00\x00\x00\x00\x00\x02\x00\x00\x00\x04\x00\x00\x00\x03\
+\x00\x00\x00\x00\x00\x02\x00\x00\x00\x07\x00\x00\x00\x03\
 \x00\x00\x00\x00\x00\x00\x00\x00\
 \x00\x00\x00\x10\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\
 \x00\x00\x01\x8c\x07\x0d\xcd\xbb\
+\x00\x00\x00\xe6\x00\x00\x00\x00\x00\x01\x00\x00\x11P\
+\x00\x00\x01\x8c\x07>m\xcb\
+\x00\x00\x01\x18\x00\x00\x00\x00\x00\x01\x00\x00\x13\x86\
+\x00\x00\x01\x8c\x07>\x15\x0c\
 \x00\x00\x00D\x00\x00\x00\x00\x00\x01\x00\x00\x03\x9b\
+\x00\x00\x01\x8c\x07=4H\
+\x00\x00\x00p\x00\x00\x00\x00\x00\x01\x00\x00\x05\xbc\
 \x00\x00\x01\x8c\x07\x0d\xa2\x8f\
-\x00\x00\x00d\x00\x00\x00\x00\x00\x01\x00\x00\x05\xd8\
+\x00\x00\x00\x90\x00\x00\x00\x00\x00\x01\x00\x00\x07\xf9\
 \x00\x00\x01\x8c\x07\x0e\x1d]\
-\x00\x00\x00\x90\x00\x00\x00\x00\x00\x01\x00\x00\x09\xd2\
+\x00\x00\x00\xbc\x00\x00\x00\x00\x00\x01\x00\x00\x0b\xf3\
 \x00\x00\x01\x8c\x07\x0ek\xbb\
 "
 

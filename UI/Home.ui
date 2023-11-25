@@ -64,10 +64,10 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="PlayButton">
+        <widget class="QPushButton" name="PreviousButton">
          <property name="minimumSize">
           <size>
-           <width>0</width>
+           <width>70</width>
            <height>40</height>
           </size>
          </property>
@@ -82,15 +82,19 @@
 background-color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
-          <string>Play</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/Icons/Icons/step-backward-icon.svg</normaloff>:/Icons/Icons/step-backward-icon.svg</iconset>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="PauseButton">
+        <widget class="QPushButton" name="PlayPauseButton">
          <property name="minimumSize">
           <size>
-           <width>0</width>
+           <width>70</width>
            <height>40</height>
           </size>
          </property>
@@ -105,7 +109,17 @@ background-color: rgb(255, 255, 255);</string>
 background-color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
-          <string>Pause</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/Icons/Icons/play-pause-icon.svg</normaloff>:/Icons/Icons/play-pause-icon.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -113,7 +127,7 @@ background-color: rgb(255, 255, 255);</string>
         <widget class="QPushButton" name="NextButton">
          <property name="minimumSize">
           <size>
-           <width>0</width>
+           <width>70</width>
            <height>40</height>
           </size>
          </property>
@@ -128,7 +142,11 @@ background-color: rgb(255, 255, 255);</string>
 background-color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
-          <string>Next</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/Icons/Icons/step-forward-icon.svg</normaloff>:/Icons/Icons/step-forward-icon.svg</iconset>
          </property>
         </widget>
        </item>
@@ -228,7 +246,17 @@ background-color: rgb(255, 255, 255);</string>
 background-color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
-        <string>Voice Control</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/Icons/Icons/microphone-icon.svg</normaloff>:/Icons/Icons/microphone-icon.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
        </property>
       </widget>
      </item>
@@ -272,6 +300,8 @@ background-color: rgb(255, 255, 255);</string>
    <header location="global">QtWebEngineWidgets/QWebEngineView</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

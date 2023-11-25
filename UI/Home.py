@@ -19,6 +19,7 @@ from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QPushButton,
     QSizePolicy, QSlider, QSpacerItem, QVBoxLayout,
     QWidget)
+from UI import resources_rc
 
 class Ui_Home(object):
     def setupUi(self, Home):
@@ -52,30 +53,40 @@ class Ui_Home(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer_3)
 
-        self.PlayButton = QPushButton(Home)
-        self.PlayButton.setObjectName(u"PlayButton")
-        self.PlayButton.setMinimumSize(QSize(0, 40))
-        self.PlayButton.setFont(font)
-        self.PlayButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
+        self.PreviousButton = QPushButton(Home)
+        self.PreviousButton.setObjectName(u"PreviousButton")
+        self.PreviousButton.setMinimumSize(QSize(70, 40))
+        self.PreviousButton.setFont(font)
+        self.PreviousButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
 "background-color: rgb(255, 255, 255);")
+        icon = QIcon()
+        icon.addFile(u":/Icons/Icons/step-backward-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.PreviousButton.setIcon(icon)
 
-        self.horizontalLayout.addWidget(self.PlayButton)
+        self.horizontalLayout.addWidget(self.PreviousButton)
 
-        self.PauseButton = QPushButton(Home)
-        self.PauseButton.setObjectName(u"PauseButton")
-        self.PauseButton.setMinimumSize(QSize(0, 40))
-        self.PauseButton.setFont(font)
-        self.PauseButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
+        self.PlayPauseButton = QPushButton(Home)
+        self.PlayPauseButton.setObjectName(u"PlayPauseButton")
+        self.PlayPauseButton.setMinimumSize(QSize(70, 40))
+        self.PlayPauseButton.setFont(font)
+        self.PlayPauseButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
 "background-color: rgb(255, 255, 255);")
+        icon1 = QIcon()
+        icon1.addFile(u":/Icons/Icons/play-pause-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.PlayPauseButton.setIcon(icon1)
+        self.PlayPauseButton.setIconSize(QSize(30, 30))
 
-        self.horizontalLayout.addWidget(self.PauseButton)
+        self.horizontalLayout.addWidget(self.PlayPauseButton)
 
         self.NextButton = QPushButton(Home)
         self.NextButton.setObjectName(u"NextButton")
-        self.NextButton.setMinimumSize(QSize(0, 40))
+        self.NextButton.setMinimumSize(QSize(70, 40))
         self.NextButton.setFont(font)
         self.NextButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
 "background-color: rgb(255, 255, 255);")
+        icon2 = QIcon()
+        icon2.addFile(u":/Icons/Icons/step-forward-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.NextButton.setIcon(icon2)
 
         self.horizontalLayout.addWidget(self.NextButton)
 
@@ -120,6 +131,10 @@ class Ui_Home(object):
         self.VCButton.setFont(font)
         self.VCButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
 "background-color: rgb(255, 255, 255);")
+        icon3 = QIcon()
+        icon3.addFile(u":/Icons/Icons/microphone-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.VCButton.setIcon(icon3)
+        self.VCButton.setIconSize(QSize(30, 30))
 
         self.VCLayout.addWidget(self.VCButton)
 
@@ -143,9 +158,9 @@ class Ui_Home(object):
     def retranslateUi(self, Home):
         Home.setWindowTitle(QCoreApplication.translate("Home", u"Form", None))
         self.CurrentSongLabel.setText(QCoreApplication.translate("Home", u"Current song: ", None))
-        self.PlayButton.setText(QCoreApplication.translate("Home", u"Play", None))
-        self.PauseButton.setText(QCoreApplication.translate("Home", u"Pause", None))
-        self.NextButton.setText(QCoreApplication.translate("Home", u"Next", None))
-        self.VCButton.setText(QCoreApplication.translate("Home", u"Voice Control", None))
+        self.PreviousButton.setText("")
+        self.PlayPauseButton.setText("")
+        self.NextButton.setText("")
+        self.VCButton.setText("")
     # retranslateUi
 
