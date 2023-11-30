@@ -29,17 +29,34 @@
       <number>5</number>
      </property>
      <item>
-      <widget class="QLabel" name="CurrentSongLabel">
-       <property name="font">
-        <font>
-         <family>Tahoma</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Current song: </string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="CurrentSongLabel">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Current song: </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="CurrentSong">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
      <item>
       <widget class="QSlider" name="MusicSlider">
@@ -77,9 +94,19 @@
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
-          <string notr="true">border-radius : 10px; border : 2px solid black; padding:10px;
-background-color: rgb(255, 255, 255);</string>
+          <string notr="true">QPushButton{border-radius : 10px; border : 2px solid black; padding:10px;
+background-color: rgb(255, 255, 255);}
+
+QPushButton::pressed{
+	background-color: #a6e9ff;
+	border-radius: 10px;
+	border: 2px solid black;
+	padding:10px;
+}</string>
          </property>
          <property name="text">
           <string/>
@@ -104,9 +131,19 @@ background-color: rgb(255, 255, 255);</string>
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
-          <string notr="true">border-radius : 10px; border : 2px solid black; padding:10px;
-background-color: rgb(255, 255, 255);</string>
+          <string notr="true">QPushButton{border-radius : 10px; border : 2px solid black; padding:10px;
+background-color: rgb(255, 255, 255);}
+
+QPushButton::pressed{
+	background-color: #a6e9ff;
+	border-radius: 10px;
+	border: 2px solid black;
+	padding:10px;
+}</string>
          </property>
          <property name="text">
           <string/>
@@ -137,9 +174,19 @@ background-color: rgb(255, 255, 255);</string>
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
-          <string notr="true">border-radius : 10px; border : 2px solid black; padding:10px;
-background-color: rgb(255, 255, 255);</string>
+          <string notr="true">QPushButton{border-radius : 10px; border : 2px solid black; padding:10px;
+background-color: rgb(255, 255, 255);}
+
+QPushButton::pressed{
+	background-color: #a6e9ff;
+	border-radius: 10px;
+	border: 2px solid black;
+	padding:10px;
+}</string>
          </property>
          <property name="text">
           <string/>
@@ -240,6 +287,9 @@ background-color: rgb(255, 255, 255);</string>
          <family>Tahoma</family>
          <pointsize>12</pointsize>
         </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius : 10px; border : 2px solid black; padding:10px;

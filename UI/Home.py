@@ -35,11 +35,22 @@ class Ui_Home(object):
         self.verticalLayout_2 = QVBoxLayout()
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(5, -1, 5, -1)
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.CurrentSongLabel = QLabel(Home)
         self.CurrentSongLabel.setObjectName(u"CurrentSongLabel")
+        self.CurrentSongLabel.setMaximumSize(QSize(100, 16777215))
         self.CurrentSongLabel.setFont(font)
 
-        self.verticalLayout_2.addWidget(self.CurrentSongLabel)
+        self.horizontalLayout_2.addWidget(self.CurrentSongLabel)
+
+        self.CurrentSong = QLabel(Home)
+        self.CurrentSong.setObjectName(u"CurrentSong")
+
+        self.horizontalLayout_2.addWidget(self.CurrentSong)
+
+
+        self.verticalLayout_2.addLayout(self.horizontalLayout_2)
 
         self.MusicSlider = QSlider(Home)
         self.MusicSlider.setObjectName(u"MusicSlider")
@@ -57,8 +68,16 @@ class Ui_Home(object):
         self.PreviousButton.setObjectName(u"PreviousButton")
         self.PreviousButton.setMinimumSize(QSize(70, 40))
         self.PreviousButton.setFont(font)
-        self.PreviousButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
-"background-color: rgb(255, 255, 255);")
+        self.PreviousButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.PreviousButton.setStyleSheet(u"QPushButton{border-radius : 10px; border : 2px solid black; padding:10px;\n"
+"background-color: rgb(255, 255, 255);}\n"
+"\n"
+"QPushButton::pressed{\n"
+"	background-color: #a6e9ff;\n"
+"	border-radius: 10px;\n"
+"	border: 2px solid black;\n"
+"	padding:10px;\n"
+"}")
         icon = QIcon()
         icon.addFile(u":/Icons/Icons/step-backward-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.PreviousButton.setIcon(icon)
@@ -69,8 +88,16 @@ class Ui_Home(object):
         self.PlayPauseButton.setObjectName(u"PlayPauseButton")
         self.PlayPauseButton.setMinimumSize(QSize(70, 40))
         self.PlayPauseButton.setFont(font)
-        self.PlayPauseButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
-"background-color: rgb(255, 255, 255);")
+        self.PlayPauseButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.PlayPauseButton.setStyleSheet(u"QPushButton{border-radius : 10px; border : 2px solid black; padding:10px;\n"
+"background-color: rgb(255, 255, 255);}\n"
+"\n"
+"QPushButton::pressed{\n"
+"	background-color: #a6e9ff;\n"
+"	border-radius: 10px;\n"
+"	border: 2px solid black;\n"
+"	padding:10px;\n"
+"}")
         icon1 = QIcon()
         icon1.addFile(u":/Icons/Icons/play-pause-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.PlayPauseButton.setIcon(icon1)
@@ -82,8 +109,16 @@ class Ui_Home(object):
         self.NextButton.setObjectName(u"NextButton")
         self.NextButton.setMinimumSize(QSize(70, 40))
         self.NextButton.setFont(font)
-        self.NextButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
-"background-color: rgb(255, 255, 255);")
+        self.NextButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.NextButton.setStyleSheet(u"QPushButton{border-radius : 10px; border : 2px solid black; padding:10px;\n"
+"background-color: rgb(255, 255, 255);}\n"
+"\n"
+"QPushButton::pressed{\n"
+"	background-color: #a6e9ff;\n"
+"	border-radius: 10px;\n"
+"	border: 2px solid black;\n"
+"	padding:10px;\n"
+"}")
         icon2 = QIcon()
         icon2.addFile(u":/Icons/Icons/step-forward-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.NextButton.setIcon(icon2)
@@ -129,6 +164,7 @@ class Ui_Home(object):
         self.VCButton = QPushButton(Home)
         self.VCButton.setObjectName(u"VCButton")
         self.VCButton.setFont(font)
+        self.VCButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.VCButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
 "background-color: rgb(255, 255, 255);")
         icon3 = QIcon()
@@ -158,6 +194,7 @@ class Ui_Home(object):
     def retranslateUi(self, Home):
         Home.setWindowTitle(QCoreApplication.translate("Home", u"Form", None))
         self.CurrentSongLabel.setText(QCoreApplication.translate("Home", u"Current song: ", None))
+        self.CurrentSong.setText(QCoreApplication.translate("Home", u"TextLabel", None))
         self.PreviousButton.setText("")
         self.PlayPauseButton.setText("")
         self.NextButton.setText("")
