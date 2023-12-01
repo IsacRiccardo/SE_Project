@@ -1,7 +1,7 @@
 import sys
 
 from PySide6 import QtCore
-from PySide6.QtWidgets import QApplication, QWidget, QDialog
+from PySide6.QtWidgets import QApplication, QWidget, QDialog, QButtonGroup
 
 from Model.Activity import Activity
 from Model.GPS import GPS
@@ -18,6 +18,7 @@ class App:
         self.activity = None
         self.home_page = None
         self.media = MediaPlayer()
+        self.buttonGroup = QButtonGroup()
 
         # Create a new activity
         self.activity = Activity()
@@ -33,6 +34,13 @@ class App:
         # Create Media page
         self.media_page = Media(self.media)
         self.activity.stackedWidget.insertWidget(2, self.media_page)
+
+        # Add buttons to button group
+        self.buttonGroup.addButton(self.activity.HomeButton)
+        self.buttonGroup.addButton(self.activity.GPSButton)
+        self.buttonGroup.addButton(self.activity.VCButton)
+        self.buttonGroup.addButton(self.activity.AVButton)
+        self.activity.HomeButton.setChecked(True)
 
         # Connect UI buttons to methods (Slots)
         self.activity.HomeButton.clicked.connect(self.showHome)

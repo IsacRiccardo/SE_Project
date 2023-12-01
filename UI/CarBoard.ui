@@ -92,7 +92,7 @@
 	border: 2px solid black
 }
 
-QPushButton::pressed{
+QPushButton::checked{
 	background-color: #a6e9ff;
 	border-radius: 10px;
 	border: 2px solid black
@@ -154,7 +154,7 @@ QPushButton::pressed{
 	border: 2px solid black
 }
 
-QPushButton::pressed{
+QPushButton::checked{
 	background-color: #a6e9ff;
 	border-radius: 10px;
 	border: 2px solid black
@@ -243,7 +243,7 @@ QPushButton::pressed{
 	border: 2px solid black
 }
 
-QPushButton::pressed{
+QPushButton::checked{
 	background-color: #a6e9ff;
 	border-radius: 10px;
 	border: 2px solid black
@@ -305,7 +305,7 @@ QPushButton::pressed{
 	border: 2px solid black
 }
 
-QPushButton::pressed{
+QPushButton::checked{
 	background-color: #a6e9ff;
 	border-radius: 10px;
 	border: 2px solid black
