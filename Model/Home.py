@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import os
 from PySide6 import QtCore
+from PySide6.QtCore import QTimer
 from PySide6.QtMultimedia import QMediaPlayer
 from PySide6.QtWidgets import QWidget
 
@@ -18,6 +19,10 @@ class Home(IHome, QWidget, Ui_Home):
 
         self.PlayPauseButton.clicked.connect(self.play)
         self.NextButton.clicked.connect(self.next)
+        self.VCButton.clicked.connect(self.listenVoiceInput)
+        self.timer = QTimer()
+        self.timer.timeout.connect(self.processVoiceInput)
+        self.timer.setInterval(2000)
 
     @QtCore.Slot()
     def play(self):
@@ -35,3 +40,27 @@ class Home(IHome, QWidget, Ui_Home):
 
     def previous(self):
         pass
+
+    def verifyMPstatus(self):
+        if self.media.getMediaPlayerStatus() == QMediaPlayer.PlaybackState.PlayingState:
+            self.CurrentSong.setText(os.path.basename(str(self.media.player.source().url())))
+            self.PlayPauseButton.setChecked(True)
+        else:
+            self.PlayPauseButton.setChecked(False)
+
+    @QtCore.Slot()
+    def listenVoiceInput(self):
+        # Stop music player
+        if self.media.getMediaPlayerStatus() == QMediaPlayer.PlaybackState.PlayingState:
+            self.media.player.pause()
+        # Start timer
+        self.timer.start()
+
+    @QtCore.Slot()
+    def processVoiceInput(self):
+        # Reset button status
+        self.VCButton.setChecked(False)
+        if self.media.getMediaPlayerStatus() == QMediaPlayer.PlaybackState.PausedState:
+            self.media.player.play()
+        # Stop timer
+        self.timer.stop()

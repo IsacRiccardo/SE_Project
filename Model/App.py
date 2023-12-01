@@ -45,6 +45,7 @@ class App:
         print("Home")
         # Display home page
         self.activity.stackedWidget.setCurrentIndex(0)
+        self.home_page.verifyMPstatus()
 
     @QtCore.Slot()
     def showGPS(self):
@@ -57,6 +58,7 @@ class App:
         print("Media")
         # Display media page
         self.activity.stackedWidget.setCurrentIndex(2)
+        self.media_page.verifyMPstatus()
 
     @QtCore.Slot()
     def showVC(self):

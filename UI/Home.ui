@@ -34,7 +34,7 @@
         <widget class="QLabel" name="CurrentSongLabel">
          <property name="maximumSize">
           <size>
-           <width>100</width>
+           <width>110</width>
            <height>16777215</height>
           </size>
          </property>
@@ -42,6 +42,7 @@
           <font>
            <family>Tahoma</family>
            <pointsize>12</pointsize>
+           <bold>true</bold>
           </font>
          </property>
          <property name="text">
@@ -51,6 +52,13 @@
        </item>
        <item>
         <widget class="QLabel" name="CurrentSong">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>TextLabel</string>
          </property>
@@ -122,7 +130,7 @@ QPushButton::pressed{
          <property name="minimumSize">
           <size>
            <width>70</width>
-           <height>40</height>
+           <height>50</height>
           </size>
          </property>
          <property name="font">
@@ -150,13 +158,21 @@ QPushButton::pressed{
          </property>
          <property name="icon">
           <iconset resource="resources.qrc">
-           <normaloff>:/Icons/Icons/play-pause-icon.svg</normaloff>:/Icons/Icons/play-pause-icon.svg</iconset>
+           <normaloff>:/Icons/Icons/play-icon.svg</normaloff>
+           <disabledoff>:/Icons/Icons/play-icon.svg</disabledoff>
+           <activeoff>:/Icons/Icons/play-icon.svg</activeoff>
+           <activeon>:/Icons/Icons/pause-icon.svg</activeon>
+           <selectedoff>:/Icons/Icons/play-icon.svg</selectedoff>
+           <selectedon>:/Icons/Icons/pause-icon.svg</selectedon>:/Icons/Icons/play-icon.svg</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>30</width>
-           <height>30</height>
+           <width>25</width>
+           <height>25</height>
           </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -292,21 +308,33 @@ QPushButton::pressed{
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius : 10px; border : 2px solid black; padding:10px;
-background-color: rgb(255, 255, 255);</string>
+        <string notr="true">QPushButton{border-radius : 10px; border : 2px solid black; padding:10px;
+background-color: rgb(255, 255, 255);}
+
+QPushButton::pressed{
+	background-color: #a6e9ff;
+	border-radius: 10px;
+	border: 2px solid black;
+	padding:10px;
+}</string>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="icon">
         <iconset resource="resources.qrc">
-         <normaloff>:/Icons/Icons/microphone-icon.svg</normaloff>:/Icons/Icons/microphone-icon.svg</iconset>
+         <normaloff>:/Icons/Icons/microphone-icon.svg</normaloff>
+         <activeon>:/Icons/Icons/waveform-icon.svg</activeon>
+         <selectedon>:/Icons/Icons/waveform-icon.svg</selectedon>:/Icons/Icons/microphone-icon.svg</iconset>
        </property>
        <property name="iconSize">
         <size>
          <width>30</width>
          <height>30</height>
         </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

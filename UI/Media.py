@@ -31,41 +31,26 @@ class Ui_Media(object):
         Media.setFont(font)
         self.gridLayout = QGridLayout(Media)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.horizontalLayout_3 = QHBoxLayout()
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.ImageLabe = QLabel(Media)
-        self.ImageLabe.setObjectName(u"ImageLabe")
-
-        self.horizontalLayout_3.addWidget(self.ImageLabe)
-
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Fixed, QSizePolicy.Minimum)
-
-        self.horizontalLayout_3.addItem(self.horizontalSpacer)
-
-        self.VolumeDial = QDial(Media)
-        self.VolumeDial.setObjectName(u"VolumeDial")
-        self.VolumeDial.setMaximumSize(QSize(16777215, 150))
-
-        self.horizontalLayout_3.addWidget(self.VolumeDial)
-
-
-        self.gridLayout.addLayout(self.horizontalLayout_3, 1, 3, 1, 1)
-
         self.verticalLayout_2 = QVBoxLayout()
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(5, -1, 5, -1)
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(-1, 40, -1, -1)
         self.CurrentSongLabel = QLabel(Media)
         self.CurrentSongLabel.setObjectName(u"CurrentSongLabel")
-        self.CurrentSongLabel.setMaximumSize(QSize(100, 50))
-        self.CurrentSongLabel.setFont(font)
+        self.CurrentSongLabel.setMaximumSize(QSize(110, 16777215))
+        font1 = QFont()
+        font1.setFamilies([u"Tahoma"])
+        font1.setPointSize(12)
+        font1.setBold(True)
+        self.CurrentSongLabel.setFont(font1)
 
         self.horizontalLayout_2.addWidget(self.CurrentSongLabel)
 
         self.CurrentSong = QLabel(Media)
         self.CurrentSong.setObjectName(u"CurrentSong")
-        self.CurrentSong.setMaximumSize(QSize(16777215, 50))
+        self.CurrentSong.setFont(font1)
 
         self.horizontalLayout_2.addWidget(self.CurrentSong)
 
@@ -106,7 +91,7 @@ class Ui_Media(object):
 
         self.PlayPauseButton = QPushButton(Media)
         self.PlayPauseButton.setObjectName(u"PlayPauseButton")
-        self.PlayPauseButton.setMinimumSize(QSize(70, 40))
+        self.PlayPauseButton.setMinimumSize(QSize(70, 50))
         self.PlayPauseButton.setFont(font)
         self.PlayPauseButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.PlayPauseButton.setStyleSheet(u"QPushButton{border-radius : 10px; border : 2px solid black; padding:10px;\n"
@@ -119,9 +104,15 @@ class Ui_Media(object):
 "	padding:10px;\n"
 "}")
         icon1 = QIcon()
-        icon1.addFile(u":/Icons/Icons/play-pause-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/Icons/Icons/play-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/Icons/Icons/play-icon.svg", QSize(), QIcon.Disabled, QIcon.Off)
+        icon1.addFile(u":/Icons/Icons/play-icon.svg", QSize(), QIcon.Active, QIcon.Off)
+        icon1.addFile(u":/Icons/Icons/pause-icon.svg", QSize(), QIcon.Active, QIcon.On)
+        icon1.addFile(u":/Icons/Icons/play-icon.svg", QSize(), QIcon.Selected, QIcon.Off)
+        icon1.addFile(u":/Icons/Icons/pause-icon.svg", QSize(), QIcon.Selected, QIcon.On)
         self.PlayPauseButton.setIcon(icon1)
-        self.PlayPauseButton.setIconSize(QSize(30, 30))
+        self.PlayPauseButton.setIconSize(QSize(25, 25))
+        self.PlayPauseButton.setCheckable(True)
 
         self.horizontalLayout.addWidget(self.PlayPauseButton)
 
@@ -153,11 +144,54 @@ class Ui_Media(object):
         self.verticalLayout_2.addLayout(self.horizontalLayout)
 
 
-        self.gridLayout.addLayout(self.verticalLayout_2, 3, 3, 1, 1)
+        self.gridLayout.addLayout(self.verticalLayout_2, 2, 1, 1, 1)
 
         self.verticalSpacer = QSpacerItem(20, 50, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
-        self.gridLayout.addItem(self.verticalSpacer, 2, 3, 1, 1)
+        self.gridLayout.addItem(self.verticalSpacer, 1, 1, 1, 1)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.ImageLabel = QLabel(Media)
+        self.ImageLabel.setObjectName(u"ImageLabel")
+
+        self.horizontalLayout_3.addWidget(self.ImageLabel)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Fixed, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer)
+
+        self.verticalLayout = QVBoxLayout()
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.VolumeLabel = QLabel(Media)
+        self.VolumeLabel.setObjectName(u"VolumeLabel")
+        self.VolumeLabel.setMaximumSize(QSize(16777215, 25))
+        self.VolumeLabel.setFont(font1)
+        self.VolumeLabel.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout.addWidget(self.VolumeLabel)
+
+        self.VolumeDial = QDial(Media)
+        self.VolumeDial.setObjectName(u"VolumeDial")
+        self.VolumeDial.setMaximumSize(QSize(16777215, 150))
+        self.VolumeDial.setStyleSheet(u"background-color: rgb(0, 0, 0);")
+        self.VolumeDial.setMaximum(100)
+        self.VolumeDial.setInvertedControls(False)
+        self.VolumeDial.setWrapping(False)
+        self.VolumeDial.setNotchTarget(5.000000000000000)
+        self.VolumeDial.setNotchesVisible(True)
+
+        self.verticalLayout.addWidget(self.VolumeDial)
+
+
+        self.horizontalLayout_3.addLayout(self.verticalLayout)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 2)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.gridLayout.addItem(self.verticalSpacer_2, 3, 1, 1, 1)
 
 
         self.retranslateUi(Media)
@@ -167,11 +201,12 @@ class Ui_Media(object):
 
     def retranslateUi(self, Media):
         Media.setWindowTitle(QCoreApplication.translate("Media", u"Media", None))
-        self.ImageLabe.setText(QCoreApplication.translate("Media", u"TextLabel", None))
         self.CurrentSongLabel.setText(QCoreApplication.translate("Media", u"Current song: ", None))
-        self.CurrentSong.setText(QCoreApplication.translate("Media", u"TextLabel", None))
+        self.CurrentSong.setText(QCoreApplication.translate("Media", u"No music playing", None))
         self.PreviousButton.setText("")
         self.PlayPauseButton.setText("")
         self.NextButton.setText("")
+        self.ImageLabel.setText(QCoreApplication.translate("Media", u"TextLabel", None))
+        self.VolumeLabel.setText(QCoreApplication.translate("Media", u"Volume", None))
     # retranslateUi
 

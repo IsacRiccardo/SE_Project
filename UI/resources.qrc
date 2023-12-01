@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="Icons">
+    <file>Icons/waveform-icon.svg</file>
+    <file>Icons/pause-icon.svg</file>
+    <file>Icons/play-icon.svg</file>
     <file>Icons/play-pause-icon.svg</file>
     <file>Icons/step-backward-icon.svg</file>
     <file>Icons/step-forward-icon.svg</file>

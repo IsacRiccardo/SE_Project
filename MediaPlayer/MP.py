@@ -27,5 +27,8 @@ class MediaPlayer():
             self.media.append(os.path.abspath(os.path.join(self.mediaDir, source)))
 
     def changeVolume(self, volume):
-        self.volume = volume/100
+        self.volume = volume / 100
         self.audio.setVolume(self.volume)
+
+    def getMediaPlayerStatus(self):
+        return self.player.playbackState()

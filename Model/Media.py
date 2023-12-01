@@ -3,6 +3,7 @@
 import os
 
 from PySide6 import QtCore
+from PySide6.QtGui import QImage, QPixmap
 from PySide6.QtMultimedia import QMediaPlayer
 from PySide6.QtWidgets import QWidget
 
@@ -15,9 +16,17 @@ class Media(IMEDIA, QWidget, Ui_Media):
         super().__init__()
         self.setupUi(self)
         self.mediaPlayer = media
-        self.VolumeDial.setValue(self.mediaPlayer.volume*100)
-        self.CurrentSong.setText(os.path.basename(str(self.mediaPlayer.player.source().url())))
+        self.VolumeDial.setValue(self.mediaPlayer.volume * 100)
         self.VolumeDial.setRange(0, 100)
+
+        with open(os.path.abspath("Resources/music_image.jpg"), "rb") as f:
+            self.contentBytes = f.read()
+
+        self.musicImage = QImage()
+        self.musicImage.loadFromData(self.contentBytes)
+        self.musicImage = self.musicImage.scaled(400, 400)
+        self.pixmap = QPixmap.fromImage(self.musicImage)
+        self.ImageLabel.setPixmap(self.pixmap)
 
         self.PlayPauseButton.clicked.connect(self.play)
         self.VolumeDial.valueChanged.connect(self.changeVolume)
@@ -36,3 +45,10 @@ class Media(IMEDIA, QWidget, Ui_Media):
     @QtCore.Slot()
     def changeVolume(self):
         self.mediaPlayer.changeVolume(self.VolumeDial.value())
+
+    def verifyMPstatus(self):
+        if self.mediaPlayer.getMediaPlayerStatus() == QMediaPlayer.PlaybackState.PlayingState:
+            self.CurrentSong.setText(os.path.basename(str(self.mediaPlayer.player.source().url())))
+            self.PlayPauseButton.setChecked(True)
+        else:
+            self.PlayPauseButton.setChecked(False)

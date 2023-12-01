@@ -39,13 +39,18 @@ class Ui_Home(object):
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.CurrentSongLabel = QLabel(Home)
         self.CurrentSongLabel.setObjectName(u"CurrentSongLabel")
-        self.CurrentSongLabel.setMaximumSize(QSize(100, 16777215))
-        self.CurrentSongLabel.setFont(font)
+        self.CurrentSongLabel.setMaximumSize(QSize(110, 16777215))
+        font1 = QFont()
+        font1.setFamilies([u"Tahoma"])
+        font1.setPointSize(12)
+        font1.setBold(True)
+        self.CurrentSongLabel.setFont(font1)
 
         self.horizontalLayout_2.addWidget(self.CurrentSongLabel)
 
         self.CurrentSong = QLabel(Home)
         self.CurrentSong.setObjectName(u"CurrentSong")
+        self.CurrentSong.setFont(font1)
 
         self.horizontalLayout_2.addWidget(self.CurrentSong)
 
@@ -86,7 +91,7 @@ class Ui_Home(object):
 
         self.PlayPauseButton = QPushButton(Home)
         self.PlayPauseButton.setObjectName(u"PlayPauseButton")
-        self.PlayPauseButton.setMinimumSize(QSize(70, 40))
+        self.PlayPauseButton.setMinimumSize(QSize(70, 50))
         self.PlayPauseButton.setFont(font)
         self.PlayPauseButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.PlayPauseButton.setStyleSheet(u"QPushButton{border-radius : 10px; border : 2px solid black; padding:10px;\n"
@@ -99,9 +104,15 @@ class Ui_Home(object):
 "	padding:10px;\n"
 "}")
         icon1 = QIcon()
-        icon1.addFile(u":/Icons/Icons/play-pause-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/Icons/Icons/play-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/Icons/Icons/play-icon.svg", QSize(), QIcon.Disabled, QIcon.Off)
+        icon1.addFile(u":/Icons/Icons/play-icon.svg", QSize(), QIcon.Active, QIcon.Off)
+        icon1.addFile(u":/Icons/Icons/pause-icon.svg", QSize(), QIcon.Active, QIcon.On)
+        icon1.addFile(u":/Icons/Icons/play-icon.svg", QSize(), QIcon.Selected, QIcon.Off)
+        icon1.addFile(u":/Icons/Icons/pause-icon.svg", QSize(), QIcon.Selected, QIcon.On)
         self.PlayPauseButton.setIcon(icon1)
-        self.PlayPauseButton.setIconSize(QSize(30, 30))
+        self.PlayPauseButton.setIconSize(QSize(25, 25))
+        self.PlayPauseButton.setCheckable(True)
 
         self.horizontalLayout.addWidget(self.PlayPauseButton)
 
@@ -165,12 +176,22 @@ class Ui_Home(object):
         self.VCButton.setObjectName(u"VCButton")
         self.VCButton.setFont(font)
         self.VCButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.VCButton.setStyleSheet(u"border-radius : 10px; border : 2px solid black; padding:10px;\n"
-"background-color: rgb(255, 255, 255);")
+        self.VCButton.setStyleSheet(u"QPushButton{border-radius : 10px; border : 2px solid black; padding:10px;\n"
+"background-color: rgb(255, 255, 255);}\n"
+"\n"
+"QPushButton::pressed{\n"
+"	background-color: #a6e9ff;\n"
+"	border-radius: 10px;\n"
+"	border: 2px solid black;\n"
+"	padding:10px;\n"
+"}")
         icon3 = QIcon()
         icon3.addFile(u":/Icons/Icons/microphone-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u":/Icons/Icons/waveform-icon.svg", QSize(), QIcon.Active, QIcon.On)
+        icon3.addFile(u":/Icons/Icons/waveform-icon.svg", QSize(), QIcon.Selected, QIcon.On)
         self.VCButton.setIcon(icon3)
         self.VCButton.setIconSize(QSize(30, 30))
+        self.VCButton.setCheckable(True)
 
         self.VCLayout.addWidget(self.VCButton)
 
