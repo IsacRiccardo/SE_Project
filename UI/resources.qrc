@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="Icons">
+    <file>Icons/dashboard-report-icon.svg</file>
+    <file>Icons/speak-talk-voice-icon.svg</file>
     <file>Icons/waveform-icon.svg</file>
     <file>Icons/pause-icon.svg</file>
     <file>Icons/play-icon.svg</file>

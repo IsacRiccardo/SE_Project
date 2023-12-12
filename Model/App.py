@@ -9,6 +9,7 @@ from Model.Home import Home
 
 from MediaPlayer.MP import *
 from Model.Media import Media
+from Model.VoiceControl import VoiceControl
 
 
 class App:
@@ -31,9 +32,13 @@ class App:
         self.gps_page = GPS()
         self.activity.stackedWidget.insertWidget(1, self.gps_page)
 
-        # Create Media page
+        # Create Media page and insert it into the stacked widget
         self.media_page = Media(self.media)
         self.activity.stackedWidget.insertWidget(2, self.media_page)
+
+        # Create voice control page and insert it into the stacked widget
+        self.vc_page = VoiceControl(self.media)
+        self.activity.stackedWidget.insertWidget(3, self.vc_page)
 
         # Add buttons to button group
         self.buttonGroup.addButton(self.activity.HomeButton)
@@ -73,6 +78,7 @@ class App:
         print("VC")
         # Display vc page
         self.activity.stackedWidget.setCurrentIndex(3)
+        self.vc_page.pauseToSpeak()
 
 
 def main():

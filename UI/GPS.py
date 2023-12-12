@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'GPS.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.0
+## Created by: Qt User Interface Compiler version 6.6.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -16,7 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWebEngineWidgets import QWebEngineView
-from PySide6.QtWidgets import (QApplication, QGridLayout, QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QSizePolicy,
+    QWidget)
 
 class Ui_GPS(object):
     def setupUi(self, GPS):
@@ -25,11 +26,23 @@ class Ui_GPS(object):
         GPS.resize(846, 620)
         self.gridLayout = QGridLayout(GPS)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.webEngineView = QWebEngineView(GPS)
+        self.frame = QFrame(GPS)
+        self.frame.setObjectName(u"frame")
+        self.frame.setAutoFillBackground(False)
+        self.frame.setStyleSheet(u"border:2px solid black;\n"
+"border-radius: 15px;")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.gridLayout_2 = QGridLayout(self.frame)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.webEngineView = QWebEngineView(self.frame)
         self.webEngineView.setObjectName(u"webEngineView")
         self.webEngineView.setUrl(QUrl(u"https://www.google.com/maps/@45.7266998,21.220925,14z?ucbcb=1&entry=ttu"))
 
-        self.gridLayout.addWidget(self.webEngineView, 0, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.webEngineView, 0, 0, 1, 1)
+
+
+        self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
 
 
         self.retranslateUi(GPS)

@@ -32,3 +32,6 @@ class MediaPlayer():
 
     def getMediaPlayerStatus(self):
         return self.player.playbackState()
+
+    def pauseMediaPLayer(self):
+        self.player.pause()

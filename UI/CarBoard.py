@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'CarBoard.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.0
+## Created by: Qt User Interface Compiler version 6.6.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -36,8 +36,15 @@ class Ui_MainWindow(object):
         font.setFamilies([u"Tahoma"])
         font.setPointSize(12)
         MainWindow.setFont(font)
+        icon = QIcon()
+        icon.addFile(u":/Icons/Icons/dashboard-report-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"")
+        MainWindow.setIconSize(QSize(50, 50))
+        MainWindow.setAnimated(True)
+        MainWindow.setDocumentMode(False)
         MainWindow.setTabShape(QTabWidget.Rounded)
+        MainWindow.setDockNestingEnabled(False)
         MainWindow.setUnifiedTitleAndToolBarOnMac(False)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -68,9 +75,9 @@ class Ui_MainWindow(object):
 "	border: 2px solid black\n"
 "}\n"
 "")
-        icon = QIcon()
-        icon.addFile(u":/Icons/Icons/maps-pin-black-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.GPSButton.setIcon(icon)
+        icon1 = QIcon()
+        icon1.addFile(u":/Icons/Icons/maps-pin-black-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.GPSButton.setIcon(icon1)
         self.GPSButton.setIconSize(QSize(48, 48))
         self.GPSButton.setCheckable(True)
 
@@ -102,9 +109,9 @@ class Ui_MainWindow(object):
 "	border: 2px solid black\n"
 "}\n"
 "")
-        icon1 = QIcon()
-        icon1.addFile(u":/Icons/Icons/home-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.HomeButton.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u":/Icons/Icons/home-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.HomeButton.setIcon(icon2)
         self.HomeButton.setIconSize(QSize(48, 48))
         self.HomeButton.setCheckable(True)
 
@@ -113,24 +120,10 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addLayout(self.btnLeftLayout)
 
-        self.line_2 = QFrame(self.centralwidget)
-        self.line_2.setObjectName(u"line_2")
-        self.line_2.setFrameShape(QFrame.VLine)
-        self.line_2.setFrameShadow(QFrame.Sunken)
-
-        self.horizontalLayout.addWidget(self.line_2)
-
         self.stackedWidget = QStackedWidget(self.centralwidget)
         self.stackedWidget.setObjectName(u"stackedWidget")
 
         self.horizontalLayout.addWidget(self.stackedWidget)
-
-        self.line_3 = QFrame(self.centralwidget)
-        self.line_3.setObjectName(u"line_3")
-        self.line_3.setFrameShape(QFrame.VLine)
-        self.line_3.setFrameShadow(QFrame.Sunken)
-
-        self.horizontalLayout.addWidget(self.line_3)
 
         self.btnRightLayout = QVBoxLayout()
         self.btnRightLayout.setSpacing(7)
@@ -155,9 +148,9 @@ class Ui_MainWindow(object):
 "	border: 2px solid black\n"
 "}\n"
 "")
-        icon2 = QIcon()
-        icon2.addFile(u":/Icons/Icons/headphone-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.AVButton.setIcon(icon2)
+        icon3 = QIcon()
+        icon3.addFile(u":/Icons/Icons/headphone-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.AVButton.setIcon(icon3)
         self.AVButton.setIconSize(QSize(48, 48))
         self.AVButton.setCheckable(True)
 
@@ -189,9 +182,9 @@ class Ui_MainWindow(object):
 "	border: 2px solid black\n"
 "}\n"
 "")
-        icon3 = QIcon()
-        icon3.addFile(u":/Icons/Icons/microphone-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.VCButton.setIcon(icon3)
+        icon4 = QIcon()
+        icon4.addFile(u":/Icons/Icons/speak-talk-voice-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.VCButton.setIcon(icon4)
         self.VCButton.setIconSize(QSize(48, 48))
         self.VCButton.setCheckable(True)
 
@@ -211,7 +204,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"CarBoard", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Dash Board", None))
         self.GPSButton.setText("")
         self.HomeButton.setText("")
         self.AVButton.setText("")

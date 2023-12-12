@@ -24,7 +24,7 @@ class Media(IMEDIA, QWidget, Ui_Media):
 
         self.musicImage = QImage()
         self.musicImage.loadFromData(self.contentBytes)
-        self.musicImage = self.musicImage.scaled(400, 400)
+        self.musicImage = self.musicImage.scaled(300, 300)
         self.pixmap = QPixmap.fromImage(self.musicImage)
         self.ImageLabel.setPixmap(self.pixmap)
 

@@ -15,12 +15,31 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <widget class="QWebEngineView" name="webEngineView">
-     <property name="url">
-      <url>
-       <string>https://www.google.com/maps/@45.7266998,21.220925,14z?ucbcb=1&amp;entry=ttu</string>
-      </url>
+    <widget class="QFrame" name="frame">
+     <property name="autoFillBackground">
+      <bool>false</bool>
      </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid black;
+border-radius: 15px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QWebEngineView" name="webEngineView">
+        <property name="url">
+         <url>
+          <string>https://www.google.com/maps/@45.7266998,21.220925,14z?ucbcb=1&amp;entry=ttu</string>
+         </url>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
   </layout>
