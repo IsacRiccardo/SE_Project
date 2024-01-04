@@ -9,7 +9,7 @@ Multimedia system for cars
 
 # Used technologies
 - Qt Designer
+- Pyside6 library
 - PyCharm
-- VS Code
 - Star UML (generates UML to python)
   
